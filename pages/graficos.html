@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ocean Bank - Gráficos</title>
+  <link rel="stylesheet" href="/css/graficos.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="bank-name">Ocean Bank</div>
+    <nav class="nav">
+      <ul class="nav-list">
+        <li class="nav-item"><a href="/">Home</a></li>
+        <li class="nav-item"><a href="pages/graficos.html">Gráficos</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="chart-data-container">
+    <div class="chart-container">
+      <div class="option-container">
+        <div class="loading-container">
+          <input type="file" id="csv-input" accept=".csv" />
+        </div>
+        <div class="chart-options">
+          <select id="chart-type">
+            <option value="bar">Barras</option>
+            <option value="line">Linhas</option>
+            <option value="pie">Pizza</option>
+          </select>
+        </div>
+      </div>
+      <canvas id="chart"></canvas>
+      <div class="button-container">
+        <button id="load-data" class="small-button">Carregar</button>
+        <button id="export-chart" class="small-button">Exportar</button>
+      </div>
+    </div>
+    <div class="data-preview">
+      <table id="data-table">
+        <thead>
+        </thead>
+        <tbody> 
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <footer>Todos os direitos reservados Ocean Bank</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+  <script src="/js/graficos.js"></script>
+</body>
+</html>
